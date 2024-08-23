@@ -1,0 +1,30 @@
+BEGIN
+CREATE TABLE table_m3 (
+    "Order ID" VARCHAR(100),
+    "Agent Age" INTEGER,
+    "Agent Rating" FLOAT,
+    "Store Latitude" FLOAT,
+    "Store Longitude" FLOAT,
+    "Drop Latitude" FLOAT,
+    "Drop Longitude" FLOAT,
+    "Order Date" VARCHAR(100),
+    "Order Time" VARCHAR(100),
+    "Pickup Time" VARCHAR(100),
+    "Weather" VARCHAR(100),
+    "Traffic" VARCHAR(100),
+    "Vehicle" VARCHAR(70),
+    "Area" VARCHAR(100),
+	"Delivery Time" INTEGER,
+	"Category" VARCHAR(100)
+);
+
+COPY table_m3 (
+	"Order ID", "Agent Age", "Agent Rating", "Store Latitude",
+	"Store Longitude", "Drop Latitude", "Drop Longitude", "Order Date",
+	"Order Time", "Pickup Time", "Weather", "Traffic", "Vehicle", "Area",
+	"Delivery Time", "Category") 
+FROM 'C:\Users\angel\milestone3\amazon_delivery.csv' 
+DELIMITER ',' 
+CSV HEADER;
+SELECT *
+FROM table_m3;

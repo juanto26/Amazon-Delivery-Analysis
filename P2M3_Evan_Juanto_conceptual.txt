@@ -1,0 +1,63 @@
+Conceptual Problem :
+
+1. Apa yang Dimaksud dengan NoSQL:
+- Definisi: NoSQL adalah jenis sistem basis data yang menyediakan mekanisme penyimpanan dan pengambilan data yang dimodelkan selain tabel relasional yang digunakan dalam database relasional tradisional (RDBMS). NoSQL adalah singkatan dari "Not Only SQL".
+- Ciri Khas:
+  - Skalabilitas Horizontal: Memungkinkan distribusi data di banyak server.
+  - Berbasis Dokumen, Kunci-Nilai, Kolom, atau Graf: Berbeda dari struktur tabel relasional.
+  - Tidak Selalu Mendukung ACID: Banyak NoSQL database menekankan CAP Theorem (Consistency, Availability, Partition tolerance).
+  - Flexibility Schema: Mendukung skema yang dinamis, tidak kaku.
+
+2. Kapan Harus Menggunakan NoSQL dan RDBMS:
+- NoSQL:
+  - Data Tidak Terstruktur atau Semi-Terstruktur: Misalnya, dokumen JSON, XML.
+  - Skalabilitas Tinggi: Dibutuhkan ketika volume data yang besar perlu diakses dan diolah.
+  - Kecepatan Akses: Kecepatan baca/tulis tinggi dan latensi rendah.
+  - Skenario Big Data dan Analitik: Penggunaan di mana analisis data yang cepat dan masif diperlukan.
+  - Agility dalam Pengembangan: Saat skema data sering berubah.
+- RDBMS:
+  - Data Terstruktur: Data yang memiliki skema tetap dan jelas.
+  - Transaksi yang Konsisten dan Andal: Mendukung ACID properties untuk transaksi yang membutuhkan integritas data tinggi.
+  - Hubungan Data yang Kompleks: Banyak relasi antar tabel yang perlu diatur dan diakses secara kompleks.
+  - Skenario Bisnis Tradisional: Misalnya, aplikasi perbankan, ERP.
+
+3. Contoh Tools/Platform NoSQL Selain ElasticSearch:
+- MongoDB:
+  - Keunggulan:
+    - Dokumen Berbasis JSON: Data disimpan dalam dokumen BSON (Binary JSON), membuat integrasi data lebih mudah.
+    - Skalabilitas Tinggi: Sharding dan replikasi untuk ketersediaan data yang tinggi.
+    - Agility: Skema dinamis, mendukung perubahan data yang cepat.
+- Cassandra:
+  - Keunggulan:
+    - Skalabilitas Horizontal: Dirancang untuk menangani sejumlah besar data di banyak server.
+    - Desain Tanpa Titik Kegagalan: Node yang sama pentingnya, replikasi data, dan toleransi terhadap kesalahan.
+    - Waktu Respon Rendah: Konsistensi yang dapat dikonfigurasi dan latensi rendah untuk operasi baca/tulis.
+
+4. Apa yang Diketahui dari Airflow:
+- Apache Airflow:
+  - Definisi: Alat open-source untuk mengotomatiskan, menjadwalkan, dan memantau alur kerja.
+  - Fitur Utama:
+    - DAG (Directed Acyclic Graphs): Mewakili alur kerja yang diatur dalam bentuk grafis acyclic.
+    - Eksekusi Dinamis: Alur kerja yang dapat dibuat dinamis menggunakan kode Python.
+    - Monitoring dan Logging: Antarmuka web untuk memantau status tugas dan melihat log.
+    - Ekstensibilitas: Mudah diperluas dengan plugin dan integrasi dengan berbagai sistem.
+
+5. Apa yang Diketahui dari Great Expectations:
+- Great Expectations:
+  - Definisi: Alat open-source untuk memastikan kualitas data melalui pengujian otomatis dan validasi data.
+  - Fitur Utama:
+    - Expectations: Pernyataan formal yang mendefinisikan aturan atau kondisi yang harus dipenuhi oleh data.
+    - Data Docs: Dokumentasi otomatis yang menyertakan hasil validasi data.
+    - Integrasi Mudah: Dapat diintegrasikan dengan berbagai sumber data dan pipeline.
+    - Data Profiling: Alat untuk mengevaluasi dan memahami karakteristik data.
+
+6. Apa yang Diketahui dari Batch Processing:
+- Definisi: Proses pengolahan data dalam jumlah besar yang dikumpulkan dalam satu batch dan diproses bersama-sama pada satu waktu tertentu.
+- Contoh Kasus Penggunaan:
+  - Pengolahan Transaksi Keuangan: Misalnya, pemrosesan tagihan kartu kredit pada akhir bulan.
+  - ETL (Extract, Transform, Load): Mengambil data dari berbagai sumber, mengubahnya sesuai kebutuhan, dan memuatnya ke dalam data warehouse.
+  - Pengolahan Log File: Menganalisis log server web pada interval waktu tertentu untuk menghasilkan laporan penggunaan.
+- Tools:
+  - Apache Hadoop: Framework untuk pemrosesan data besar menggunakan model MapReduce.
+  - Apache Spark: Mesin pemrosesan data besar yang mendukung batch processing dan juga pemrosesan real-time.
+  - Talend: Alat integrasi data yang menyediakan solusi untuk pemrosesan batch dan ETL.
